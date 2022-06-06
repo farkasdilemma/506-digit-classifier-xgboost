@@ -30,6 +30,9 @@ filename = open('model_outputs/xgb_model.pkl', 'rb')
 xgb_model = pickle.load(filename)
 filename.close()
 
+filename = open('analysis/optimization/xgb_grid_model.pkl', 'rb')
+xgb_grid_model = pickle.load(filename)
+filename.close()
 
 
 ########### define variables
@@ -209,8 +212,8 @@ def update_data(string):
         rf_prob=round(rf_prob*100,2)
 
         # make a prediction: XG Boost
-        xgb_pred = xgb_model.predict(some_digit_scaled)
-        xgb_prob_array = xgb_model.predict_proba(some_digit_scaled)
+        xgb_pred = xgb_grid_model.predict(some_digit_scaled)
+        xgb_prob_array = xgb_grid_model.predict_proba(some_digit_scaled)
         xgb_prob = max(xgb_prob_array[0])
         xgb_prob=round(xgb_prob*100,2)
 
