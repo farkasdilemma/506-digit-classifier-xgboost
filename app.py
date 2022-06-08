@@ -38,7 +38,7 @@ filename.close()
 ########### define variables
 tabtitle='digits classifier'
 sourceurl = 'https://scikit-learn.org/stable/auto_examples/classification/plot_digits_classification.html'
-githublink = 'https://github.com/plotly-dash-apps/506-digit-classifier-xgboost'
+githublink = 'https://github.com/farkasdilemma/506-digit-classifier-xgboost'
 canvas_size = 200
 
 ########### BLANK FIGURE
@@ -156,7 +156,7 @@ app.layout = html.Div(children=[
                 html.H6(id='rf-prediction', children='...'),
                 html.H6(id='rf-probability', children='waiting for inputs'),
                 html.Br(),
-                html.H4('XGBoost Model:'),
+                html.H4('XGBoost Model with gridsearch:'),
                 html.H6(id='xgb-prediction', children='...'),
                 html.H6(id='xgb-probability', children='waiting for inputs'),
             ], className='three columns'),
